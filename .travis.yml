@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install: 
-  - docker build -t jmehitch/DockerTut -f Dockerfile.dev .
+  - docker build -t jmehitch/docker-tut -f Dockerfile.dev .
 
 script: 
-  - docker run -e CI=true jmehitch/DockerTut npm run test -- --coverage
+  - docker run -e CI=true jmehitch/docker-tut npm run test -- --coverage
